@@ -1,0 +1,9 @@
+rejection_stage,rejection_reason,files
+Credit,High FOIR (existing EMIs),51
+Credit,Income not sufficient,44
+Credit,Low CIBIL score,43
+FI,Negative residence FI,43
+FI,Address not traceable,39
+Credit,Policy - age / tenure,36
+FCU,Document mismatch,36
+FI,Negative office FI,32

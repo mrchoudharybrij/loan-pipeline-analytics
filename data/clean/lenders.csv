@@ -1,0 +1,9 @@
+lender_id,lender_name,lender_type,payout_pct
+L01,Bank A,Bank,0.4
+L02,Bank B,Bank,0.45
+L03,Bank C,Bank,0.5
+L04,HFC A,HFC,0.65
+L05,HFC B,HFC,0.7
+L06,HFC C,HFC,0.6
+L07,NBFC A,NBFC,0.9
+L08,NBFC B,NBFC,1.0

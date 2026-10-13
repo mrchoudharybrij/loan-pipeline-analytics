@@ -1,0 +1,11 @@
+product,segment,logins,disbursal_rate_pct,avg_ticket_lakh,avg_roi_pct
+Balance Transfer,Affordable,94,55.3,13.4,11.54
+Balance Transfer,Prime,118,58.5,33.3,9.54
+Home Loan - Purchase,Affordable,347,55.9,12.5,11.6
+Home Loan - Purchase,Prime,345,56.8,36.4,9.71
+Loan Against Property,Affordable,96,50.0,10.5,12.87
+Loan Against Property,Prime,117,59.8,27.9,10.26
+Plot + Construction,Affordable,141,51.8,12.7,11.74
+Plot + Construction,Prime,131,59.5,38.5,9.89
+Self Construction,Affordable,176,56.8,13.0,11.56
+Self Construction,Prime,181,56.9,31.9,9.52

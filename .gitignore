@@ -1,0 +1,7 @@
+# database is rebuilt by src/04_load_to_sqlite.py
+data/*.db
+__pycache__/
+.DS_Store
+.ipynb_checkpoints/
+# never commit real client files
+real_data/
