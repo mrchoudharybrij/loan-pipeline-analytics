@@ -39,8 +39,7 @@ src/02_explore_data.py              profile: shape, types, missing values, dupli
 src/03_clean_data.py                fix all issues + add features (days to sanction, payout amount)
 src/04_load_to_sqlite.py            load clean tables into SQLite
 src/05_run_sql_queries.py           run every query in sql/analysis_queries.sql, save to outputs/
-src/06_make_readme_charts.py        summary image for this README (matplotlib)
-dashboard/index.html                interactive dashboard over the query outputs
+src/06_make_readme_charts.py        dashboard summary image (matplotlib) -> dashboard/summary.png
 ```
 
 **Cleaning decisions (and why):**
@@ -60,8 +59,8 @@ These findings come from the synthetic data, so they show what the pipeline surf
 |---|---|---|
 | 1 | **Overall conversion:** of 1,746 decided files, 63.5% were sanctioned and 56.3% disbursed. | 983 disbursed |
 | 2 | **Biggest drop-off is the credit decision:** 213 files were lost between FCU clearance and sanction. Top reasons were high FOIR (51), insufficient income (44) and low CIBIL score (43). | 213 files |
-| 3 | **Highest payout % ≠ best lender.** NBFC B earns ₹11,050 per file logged in, against ₹5,912 for Bank A. Bank A still brings the largest disbursed value (₹41.4 Cr) and the lowest customer ROI (9.12% vs 13.61%). | 1.9× gap |
-| 4 | **Connector files fail FCU checks most often:** 8.7% of logins, against 2.6–4.1% for every other channel. | 8.7% |
+| 3 | **Payout per file vs loan size is a trade-off.** NBFC B earns the firm ₹11,050 per file logged in, against ₹5,912 for Bank A. But Bank A brings the largest disbursed value (₹41.4 Cr) and gives customers the lowest rate (9.12% vs 13.61%). | 1.9× gap |
+| 4 | **Connector files fail FCU checks most often:** 8.7% of logins, against 2.6–4.1% for every other named channel. | 8.7% |
 | 5 | **Leakage:** 83 files were sanctioned but never disbursed, worth ₹16.2 Cr of loans and ₹10.9 lakh of missed payout. | ₹10.9 L |
 | 6 | **Seasonality:** Oct–Nov 2025 logins (100 and 102) were well above the 75-per-month average. | +35% |
 | 7 | **Insurance attach rate** is 47% on bank loans, against 73% on HFC loans and 83% on NBFC loans. | 47% vs 83% |
@@ -80,11 +79,11 @@ These findings come from the synthetic data, so they show what the pipeline surf
 
 ## 6. Dashboard
 
-Interactive dashboard: funnel, top rejection reasons, monthly disbursements, lender scorecard and channel quality. Every figure is read from the CSV files in `outputs/`. `dashboard/index.html` is the page code of the hosted dashboard (built with d3.js). `docs/tableau_guide.md` explains how to rebuild it in Tableau Public.
+The summary dashboard at the top of this page (`dashboard/summary.png`) shows the funnel drop-off, monthly disbursements, payout per file by lender and FCU rejection by channel. It is built by `src/06_make_readme_charts.py`, and every figure comes from the query outputs in `outputs/`, so it updates when the pipeline is re-run.
 
 ## 7. Tools
 
-Python (pandas, NumPy, matplotlib) · SQL (SQLite) · d3.js dashboard · Git
+Python (pandas, NumPy, matplotlib) · SQL (SQLite) · Git
 
 ## How to run
 
